@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.mapper.UserMapper">
-    <select id="findAll" resultType="com.example.demo.model.User">
+<mapper namespace="com.example.demo.UserMapper">
+    <select id="findAll" resultType="com.example.demo.User">
         SELECT * FROM users
     </select>
 
-    <select id="findById" parameterType="int" resultType="com.example.demo.model.User">
+    <select id="findById" parameterType="int" resultType="com.example.demo.User">
         SELECT * FROM users WHERE id = #{id}
     </select>
 
-    <insert id="insert" parameterType="com.example.demo.model.User">
+    <insert id="insert" parameterType="com.example.demo.User">
         INSERT INTO users (name) VALUES (#{name})
     </insert>
 
-    <update id="update" parameterType="com.example.demo.model.User">
+    <update id="update" parameterType="com.example.demo.User">
         UPDATE users SET name = #{name} WHERE id = #{id}
     </update>
 
